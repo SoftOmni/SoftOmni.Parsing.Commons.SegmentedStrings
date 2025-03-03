@@ -99,6 +99,17 @@ public interface IStringBuilder : IEnumerable<char>
     ///     A reference to this instance after the append operation is completed.
     /// </returns>
     public IStringBuilder Append(IStringBuilder? value);
+    
+    /// <summary>
+    ///     Appends the string representation of a specified string builder to this instance.
+    /// </summary>
+    /// <param name="value">
+    ///     The string builder to append.
+    /// </param>
+    /// <returns>
+    ///     A reference to this instance after the append operation is completed.
+    /// </returns>
+    public IStringBuilder Append(StringBuilder? value);
 
     /// <summary>
     ///     Appends the string representation of a specified 16-bit unsigned integer to this instance.
