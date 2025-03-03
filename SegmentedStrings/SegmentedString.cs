@@ -212,32 +212,38 @@ public sealed class SegmentedString : IStringBuilder
 
     public IStringBuilder Prepend(IStringBuilder? value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(ushort value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(uint value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(ulong value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(char value, int repeatCount)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(char[]? value, int startIndex, int charCount)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(IFormatProvider? provider,
@@ -248,92 +254,117 @@ public sealed class SegmentedString : IStringBuilder
 
     public IStringBuilder Prepend(string? value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(string? value, int startIndex, int count)
     {
-        throw new NotImplementedException();
+        ReadOnlySpan<char> valueAsSpan = value.AsSpan(startIndex, count);
+        
+        _builder.Insert(0, valueAsSpan);
+        return this;
     }
 
     public IStringBuilder Prepend(IStringBuilder? value, int startIndex, int count)
     {
-        throw new NotImplementedException();
+        if (value is null)
+            return Prepend((StringBuilder?)null);
+
+        ReadOnlySpan<char> valueAsSpan = value.ToString().AsSpan(startIndex, count);
+
+        _builder.Insert(0, valueAsSpan);
+        return this;
     }
 
     public IStringBuilder Prepend(float value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(ref StringBuilder.AppendInterpolatedStringHandler handler)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, handler.ToString()); //TODO: Test and validate behavior
+        return this;
     }
 
     public IStringBuilder Prepend(ReadOnlySpan<char> value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(sbyte value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(bool value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(byte value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(char value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(char[]? value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(double value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(decimal value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(int value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(long value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(object? value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(ReadOnlyMemory<char> value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder Prepend(short value)
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, value);
+        return this;
     }
 
     public IStringBuilder AppendFormat(string format, object? arg0, object? arg1)
@@ -417,77 +448,129 @@ public sealed class SegmentedString : IStringBuilder
 
     public IStringBuilder PrependFormat(string format, object? arg0, object? arg1)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new();
+        builder.AppendFormat(format, arg0, arg1);
+
+        _builder.Insert(0, builder);
+        return this;
     }
 
     public IStringBuilder PrependFormat(IFormatProvider? provider, string format,
         object? arg0, object? arg1, object? arg2)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new();
+        builder.AppendFormat(format, arg0, arg1);
+
+        _builder.Insert(0, builder);
+        return this;
     }
 
     public IStringBuilder PrependFormat(string format, object? arg0, object? arg1,
         object? arg2)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new();
+        builder.AppendFormat(format, arg0, arg1, arg2);
+
+        _builder.Insert(0, builder);
+        return this;
     }
 
     public IStringBuilder PrependFormat(IFormatProvider? provider, string format,
         object? arg0, object? arg1)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new();
+        builder.AppendFormat(provider, format, arg0, arg1);
+
+        _builder.Insert(0, builder);
+        return this;
     }
 
     public IStringBuilder PrependFormat(IFormatProvider? provider, CompositeFormat format,
         ReadOnlySpan<object?> args)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new();
+        builder.AppendFormat(provider, format, args);
+
+        _builder.Insert(0, builder);
+        return this;
     }
 
     public IStringBuilder PrependFormat(string format, object? arg0)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new();
+        builder.AppendFormat(format, arg0);
+
+        _builder.Insert(0, builder);
+        return this;
     }
 
     public IStringBuilder PrependFormat(IFormatProvider? provider, string format,
         params object?[] args)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new();
+        builder.AppendFormat(provider, format, args);
+
+        _builder.Insert(0, builder);
+        return this;
     }
 
     public IStringBuilder PrependFormat(IFormatProvider? provider, string format,
         object? arg0)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new();
+        builder.AppendFormat(provider, format, arg0);
+
+        _builder.Insert(0, builder);
+        return this;
     }
 
     public IStringBuilder PrependFormat(string format, params object?[] args)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new();
+        builder.AppendFormat(format, args);
+
+        _builder.Insert(0, builder);
+        return this;
     }
 
     public IStringBuilder PrependFormat(IFormatProvider? provider, CompositeFormat format,
         params object?[] args)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new();
+        builder.AppendFormat(provider, format, args);
+
+        _builder.Insert(0, builder);
+        return this;
     }
 
     public IStringBuilder PrependFormat<TArg0, TArg1, TArg2>(IFormatProvider? provider,
         CompositeFormat format, TArg0 arg0, TArg1 arg1, TArg2 arg2)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new();
+        builder.AppendFormat(provider, format, arg0, arg1, arg2);
+
+        _builder.Insert(0, builder);
+        return this;
     }
 
     public IStringBuilder PrependFormat<TArg0, TArg1>(IFormatProvider? provider,
         CompositeFormat format, TArg0 arg0, TArg1 arg1)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new();
+        builder.AppendFormat(provider, format, arg0, arg1);
+
+        _builder.Insert(0, builder);
+        return this;
     }
 
     public IStringBuilder PrependFormat<TArg0>(IFormatProvider? provider,
         CompositeFormat format, TArg0 arg0)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new();
+        builder.AppendFormat(provider, format, arg0);
+
+        _builder.Insert(0, builder);
+        return this;
     }
 
     public IStringBuilder AppendJoin(string? separator, params string?[] values)
@@ -528,32 +611,62 @@ public sealed class SegmentedString : IStringBuilder
 
     public IStringBuilder PrependJoin(string? separator, params string?[] values)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new StringBuilder();
+
+        builder.AppendJoin(separator, values);
+
+        _builder.Insert(0, builder.ToString());
+        return this;
     }
 
     public IStringBuilder PrependJoin(string? separator, params object?[] values)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new StringBuilder();
+
+        builder.AppendJoin(separator, values);
+
+        _builder.Insert(0, builder.ToString());
+        return this;
     }
 
     public IStringBuilder PrependJoin(char separator, params object?[] values)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new StringBuilder();
+
+        builder.AppendJoin(separator, values);
+
+        _builder.Insert(0, builder.ToString());
+        return this;
     }
 
     public IStringBuilder PrependJoin(char separator, params string?[] values)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new StringBuilder();
+
+        builder.AppendJoin(separator, values);
+
+        _builder.Insert(0, builder.ToString());
+        return this;
     }
 
     public IStringBuilder PrependJoin<T>(char separator, IEnumerable<T> values)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new StringBuilder();
+
+        builder.AppendJoin(separator, values);
+
+        _builder.Insert(0, builder.ToString());
+        return this;
     }
 
     public IStringBuilder PrependJoin<T>(string? separator, IEnumerable<T> values)
     {
-        throw new NotImplementedException();
+        StringBuilder builder = new StringBuilder();
+
+        builder.AppendJoin(separator, values);
+
+        _builder.Insert(0, builder.ToString());
+        return this;
     }
 
     public IStringBuilder AppendLine()
@@ -582,12 +695,14 @@ public sealed class SegmentedString : IStringBuilder
 
     public IStringBuilder PrependLine()
     {
-        throw new NotImplementedException();
+        _builder.Insert(0, '\n');
+        return this;
     }
 
     public IStringBuilder PrependLine(string? value)
     {
-        throw new NotImplementedException();
+        PrependLine();
+        return Prepend(value);
     }
 
     public IStringBuilder Clear()
@@ -618,7 +733,20 @@ public sealed class SegmentedString : IStringBuilder
 
     public bool Equals(IStringBuilder? sb)
     {
-        throw new NotImplementedException();
+        if (sb is null)
+            return false;
+
+        if (sb.Length != _builder.Length)
+            return false;
+
+        int index = 0;
+        while (index < Length)
+        {
+            if (sb[index] != _builder[index])
+                return false;
+        }
+
+        return true;
     }
 
     public bool Equals(StringBuilder? sb)
