@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegmentedStrings", "SegmentedStrings\SegmentedStrings.csproj", "{929233C6-7C35-489F-8F9B-CB31082EF38A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftOmni.Parsing.Commons.SegmentedStrings", "SoftOmni.Parsing.Commons.SegmentedStrings\SoftOmni.Parsing.Commons.SegmentedStrings.csproj", "{929233C6-7C35-489F-8F9B-CB31082EF38A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
