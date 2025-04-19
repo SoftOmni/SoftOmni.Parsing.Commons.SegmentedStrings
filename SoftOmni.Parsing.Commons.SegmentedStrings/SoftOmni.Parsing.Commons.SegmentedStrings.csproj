@@ -4,6 +4,16 @@
         <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageId>0.0.1</PackageId>
+        <Authors>Jascha MERLE</Authors>
+        <Description>
+            A C# library for string views and composable strings
+        </Description>
+        <RepositoryUrl>
+            https://github.com/SoftOmni/SegmentedStrings
+        </RepositoryUrl>
     </PropertyGroup>
 
 </Project>
