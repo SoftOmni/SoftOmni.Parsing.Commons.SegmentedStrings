@@ -6,7 +6,8 @@
         <Nullable>enable</Nullable>
 
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageId>0.0.2</PackageId>
+        <PackageId>SoftOmni.Parsing.Commons.SegmentedStrings</PackageId>
+        <Version>0.0.3</Version>
         <Authors>Jascha MERLE</Authors>
         <Description>
             A C# library for string views and composable strings
