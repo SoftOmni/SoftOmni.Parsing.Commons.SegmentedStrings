@@ -1,7 +1,7 @@
 ﻿using System.Runtime.Serialization;
 using System.Text;
 
-namespace SegmentedStrings;
+namespace SoftOmni.Parsing.Commons.SegmentedStrings;
 
 /// <summary>
 ///     This interface represents a mutable string of characters.

@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace SegmentedStrings;
+namespace SoftOmni.Parsing.Commons.SegmentedStrings;
 
 /// <summary>
 ///     Represents a segment of an <see cref="IStringBuilder"/>.

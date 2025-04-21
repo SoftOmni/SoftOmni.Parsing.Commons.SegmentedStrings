@@ -2,7 +2,7 @@
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace SegmentedStrings;
+namespace SoftOmni.Parsing.Commons.SegmentedStrings;
 
 public sealed class SegmentedString : IStringBuilder
 {
