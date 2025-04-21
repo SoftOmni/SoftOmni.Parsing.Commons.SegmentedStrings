@@ -5,7 +5,7 @@ namespace SoftOmni.Parsing.Commons.SegmentedStrings;
 
 /// <summary>
 ///     This interface represents a mutable string of characters.
-///     It contains the same members as <see cref="IStringBuilder"/> with a few exceptions
+///     It contains the same members as <see cref="StringBuilder"/> with a few exceptions
 ///     but is not a class and can be implemented by any type.
 /// </summary>
 public interface IStringBuilder : IEnumerable<char>
