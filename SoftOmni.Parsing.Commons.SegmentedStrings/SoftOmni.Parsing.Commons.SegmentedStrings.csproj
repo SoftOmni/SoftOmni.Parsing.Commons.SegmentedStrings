@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
 
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageId>0.0.1</PackageId>
+        <PackageId>0.0.2</PackageId>
         <Authors>Jascha MERLE</Authors>
         <Description>
             A C# library for string views and composable strings
