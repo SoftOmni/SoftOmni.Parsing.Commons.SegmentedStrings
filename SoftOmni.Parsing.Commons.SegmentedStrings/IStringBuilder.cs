@@ -1064,7 +1064,8 @@ public interface IStringBuilder : IEnumerable<char>
     ///     <paramref name="format"/> is null.
     /// </exception>
     /// <exception cref="FormatException">
-    ///     The index of a format item greater than or equal to the number of supplied arguments.
+    ///     The index of a format item is greater
+    ///     than or equal to the number of supplied arguments.
     /// </exception>
     public IStringBuilder AppendFormat(IFormatProvider? provider,
         CompositeFormat format, ReadOnlySpan<object?> args);
@@ -1185,7 +1186,7 @@ public interface IStringBuilder : IEnumerable<char>
     /// <returns>
     ///     A reference to this instance with <paramref name="format"/> appended.
     ///     Each format item in <paramref name="format"/>
-    ///     is replaced bu the string representation of the corresponding object argument.
+    ///     is replaced by the string representation of the corresponding object argument.
     /// </returns>
     /// <exception cref="ArgumentNullException">
     ///     <paramref name="format"/> or <paramref name="args"/> is null.
@@ -1519,7 +1520,8 @@ public interface IStringBuilder : IEnumerable<char>
     ///     <paramref name="format"/> is null.
     /// </exception>
     /// <exception cref="FormatException">
-    ///     The index of a format item greater than or equal to the number of supplied arguments.
+    ///     The index of a format item is greater
+    ///     than or equal to the number of supplied arguments.
     /// </exception>
     public IStringBuilder PrependFormat(IFormatProvider? provider,
         CompositeFormat format, ReadOnlySpan<object?> args);
@@ -1642,7 +1644,7 @@ public interface IStringBuilder : IEnumerable<char>
     /// <returns>
     ///     A reference to this instance with <paramref name="format"/> prepended.
     ///     Each format item in <paramref name="format"/>
-    ///     is replaced bu the string representation of the corresponding object argument.
+    ///     is replaced by the string representation of the corresponding object argument.
     /// </returns>
     /// <exception cref="ArgumentNullException">
     ///     <paramref name="format"/> or <paramref name="args"/> is null.
@@ -2180,7 +2182,7 @@ public interface IStringBuilder : IEnumerable<char>
     ///     to the characters in a specified read-only character span.
     /// </summary>
     /// <param name="span">
-    ///     The character span to compare with the current instance.
+    ///     The character spans to compare with the current instance.
     /// </param>
     /// <returns>
     ///     true if the characters in this instance and <paramref name="span"/> are the same; otherwise, false.
@@ -2808,7 +2810,7 @@ public interface IStringBuilder : IEnumerable<char>
     public IStringBuilder Replace(string oldValue, string? newValue);
 
     /// <summary>
-    ///     Replaces within a substring of this instance,
+    ///     Replace within a substring of this instance,
     ///     all occurrences of a specified character with
     ///     another specified character.
     /// </summary>
@@ -2844,7 +2846,7 @@ public interface IStringBuilder : IEnumerable<char>
         int count);
 
     /// <summary>
-    ///     Replaces within a substring of this instance,
+    ///     Replace within a substring of this instance,
     ///     all occurrences of a specified string with
     ///     another specified string.
     /// </summary>
@@ -2929,7 +2931,7 @@ public interface IStringBuilder : IEnumerable<char>
 
     /// <summary>
     ///     Clones this current instance into a new instance.
-    ///     This is a deep clone so the parent structures will be cloned if needed.
+    ///     This is a deep clone, so the parent structures will be cloned if needed.
     /// </summary>
     /// <returns>
     ///     An instance to the new instance with the same value.
