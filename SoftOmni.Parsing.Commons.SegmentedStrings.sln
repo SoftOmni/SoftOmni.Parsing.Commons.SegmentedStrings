@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftOmni.Parsing.Commons.SegmentedStrings", "SoftOmni.Parsing.Commons.SegmentedStrings\SoftOmni.Parsing.Commons.SegmentedStrings.csproj", "{929233C6-7C35-489F-8F9B-CB31082EF38A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftOmni.Parsing.Commons.SegmentedStrings.Tests", "SoftOmni.Parsing.Commons.SegmentedStrings.Tests\SoftOmni.Parsing.Commons.SegmentedStrings.Tests.csproj", "{A3ECAB1D-4112-42E5-A1D9-1FE42FB0C961}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{929233C6-7C35-489F-8F9B-CB31082EF38A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{929233C6-7C35-489F-8F9B-CB31082EF38A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{929233C6-7C35-489F-8F9B-CB31082EF38A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3ECAB1D-4112-42E5-A1D9-1FE42FB0C961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3ECAB1D-4112-42E5-A1D9-1FE42FB0C961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3ECAB1D-4112-42E5-A1D9-1FE42FB0C961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3ECAB1D-4112-42E5-A1D9-1FE42FB0C961}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
