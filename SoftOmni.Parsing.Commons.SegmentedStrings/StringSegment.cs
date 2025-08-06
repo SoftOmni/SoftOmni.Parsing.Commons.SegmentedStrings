@@ -690,12 +690,7 @@ public sealed class StringSegment : IStringBuilder
         return true;
     }
 
-    public bool Equals(IStringBuilder? sb)
-    {
-        throw new NotImplementedException();
-    }
-
-    public bool Equals(StringBuilder? sb)
+    public bool Equals(IReadOnlyStringBuilder? sb)
     {
         if (sb == null)
             return false;

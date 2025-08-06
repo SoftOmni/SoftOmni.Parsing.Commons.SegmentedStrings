@@ -616,7 +616,7 @@ public sealed class SegmentedString : IStringBuilder
         return _builder.Equals(span);
     }
 
-    public bool Equals(IStringBuilder? sb)
+    public bool Equals(IReadOnlyStringBuilder? sb)
     {
         throw new NotImplementedException();
     }
